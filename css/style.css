@@ -1,325 +1,379 @@
 /* ===================================
-   Wrentham Band Theme Styles
-   Based on traditional brass band aesthetic
+   Wrentham Band Theme - Faithful Recreation
+   Based on original wrenthamband.org design
    =================================== */
 
-/* Base Styles */
+/* Reset and Base Styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 html {
 	min-height: 100%;
 	position: relative;
 }
 
 body {
-	color: #333;
-	background: #f8f8f8;
-	margin-bottom: 120px; /* Space for footer */
-	-webkit-font-smoothing: antialiased;
-	-moz-font-smoothing: antialiased;
-	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-	font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
-	font-size: 16px;
+	color: #000;
+	background: #fff;
+	margin: 0;
+	padding: 0;
+	padding-bottom: 140px; /* Space for 140px footer */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+/* Top cream/yellow bar */
+.top-bar {
+	width: 100%;
+	height: 25px;
+	background: #fff;
+	border-bottom: 1px solid #FFFFCC;
+}
+
+/* Banner Section with Green Background */
+.banner-section {
+	width: 100%;
+	background-color: #33CC33;
+	border-bottom: 1px solid #FFFFCC;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 120px;
+}
+
+.banner-container {
+	width: 940px;
+	max-width: 100%;
+	height: 120px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner-image {
+	max-width: 940px;
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* Main Navigation - Black Bar */
+.main-nav {
+	width: 100%;
+	background-color: #000;
+	display: flex;
+	justify-content: center;
+}
+
+.nav-container {
+	width: 940px;
+	max-width: 100%;
+}
+
+.nav-menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.nav-menu li {
+	margin: 0;
+	padding: 0;
+}
+
+.nav-menu li a {
+	display: block;
+	padding: 8px 12px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 13px;
+	white-space: nowrap;
+	transition: background-color 0.3s ease;
+}
+
+.nav-menu li a:hover,
+.nav-menu li.active a {
+	background-color: #33CC33;
+	color: #fff;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+	width: 100%;
+	background: #fff;
+	padding: 20px 0;
+}
+
+.content-container {
+	width: 940px;
+	max-width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	padding: 0 10px;
+}
+
+/* Left Column - Main Content */
+.left-column {
+	flex: 1 1 640px;
+	min-width: 0;
+}
+
+.left-column h1,
+.left-column h2,
+.left-column h3,
+.left-column h4 {
+	color: #000;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+	font-weight: bold;
+}
+
+.left-column h1 { font-size: 24px; }
+.left-column h2 { font-size: 20px; }
+.left-column h3 { font-size: 18px; }
+.left-column h4 { font-size: 16px; }
+
+.left-column p {
+	margin-bottom: 1em;
 	line-height: 1.6;
 }
 
-/* Utility Classes */
-.whiteFont { color: #fff; }
-.lightFont { color: #666; }
-.greenFont { color: #006633; }
-
-.padding20 { padding: 20px; }
-.padding40 { padding: 40px; }
-
-/* Brand Colors - Wrentham Green & Red */
-.band-header {
-	background: linear-gradient(135deg, #006633 0%, #004d26 100%);
-	color: #fff;
-	padding: 40px 0;
-	margin-top: 50px; /* Account for fixed navbar */
-	box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+.left-column a {
+	color: #0000EE;
+	text-decoration: underline;
 }
 
-.footer-info {
-	background: linear-gradient(135deg, #8B0000 0%, #660000 100%);
-	color: #fff;
-	padding: 30px 0;
+.left-column a:visited {
+	color: #551A8B;
 }
 
-/* Navigation */
-nav.navbar {
-	background: #fff;
-	border-bottom: 3px solid #006633;
-	box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-	margin: 0;
+.left-column a:hover {
+	color: #33CC33;
 }
 
-.navbar-default {
-	border: 0;
-	border-radius: 0;
-}
-
-.navbar-brand {
-	font-size: 20px;
-	font-weight: 700;
-	color: #006633 !important;
-	text-transform: uppercase;
-	letter-spacing: 0.5px;
-}
-
-.navbar-brand:hover {
-	color: #004d26 !important;
-}
-
-.navbar li {
-	font-size: 14px;
-	text-transform: uppercase;
-	font-weight: 500;
-	letter-spacing: 0.3px;
-}
-
-.navbar-default .navbar-nav > li > a {
-	color: #333;
-	transition: all 0.3s ease;
-}
-
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li.active > a {
-	color: #fff !important;
-	background: #006633 !important;
-}
-
-.navbar-default .navbar-toggle {
-	border-color: #006633;
-}
-
-.navbar-default .navbar-toggle:hover {
-	background: rgba(0, 102, 51, 0.1);
-}
-
-.navbar-default .navbar-toggle .icon-bar {
-	background-color: #006633;
-}
-
-/* Header & Page Title */
-.page-title {
-	text-transform: uppercase;
-	font-size: 36px;
-	font-weight: 700;
-	margin: 0;
-	text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-	letter-spacing: 1px;
-}
-
-/* Main Content Area */
-.main-content {
-	padding: 40px 15px;
-}
-
-.content-card {
-	background: white;
-	border-radius: 6px;
-	padding: 30px;
-	margin-bottom: 20px;
-	box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-	border-top: 4px solid #006633;
-}
-
-.content-card h1,
-.content-card h2,
-.content-card h3,
-.content-card h4 {
-	color: #006633;
-	margin-top: 1.5em;
-	margin-bottom: 0.75em;
-	font-weight: 600;
-}
-
-.content-card h1 { font-size: 32px; }
-.content-card h2 { font-size: 28px; }
-.content-card h3 { font-size: 24px; }
-.content-card h4 { font-size: 20px; }
-
-.content-card p {
-	margin-bottom: 1.2em;
-}
-
-.content-card a {
-	color: #006633;
-	text-decoration: none;
-	border-bottom: 1px solid transparent;
-	transition: all 0.3s ease;
-}
-
-.content-card a:hover {
-	color: #004d26;
-	border-bottom-color: #006633;
-	text-decoration: none;
-}
-
-.content-card img {
+.left-column img {
 	max-width: 100%;
 	height: auto;
-	border-radius: 4px;
-	margin: 20px 0;
-	box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+	margin: 10px 0;
 }
 
-/* Sidebar */
-.sidebar-section {
-	background: white;
-	border-radius: 6px;
-	padding: 25px;
-	margin-bottom: 20px;
-	box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-	border-left: 4px solid #8B0000;
+/* Right Column - Sidebar */
+.right-column {
+	flex: 0 0 280px;
+	min-width: 280px;
 }
 
-.sidebar-section h3,
-.sidebar-section h4 {
-	color: #8B0000;
+.right-column h4 {
+	color: #000;
+	font-size: 14px;
+	font-weight: bold;
 	margin-top: 1.2em;
-	margin-bottom: 0.6em;
-	font-weight: 600;
-	font-size: 18px;
+	margin-bottom: 0.5em;
 }
 
-.sidebar-section h3:first-child,
-.sidebar-section h4:first-child {
+.right-column h4:first-child {
 	margin-top: 0;
 }
 
-.sidebar-section p {
-	font-size: 14px;
+.right-column p {
+	font-size: 13px;
 	line-height: 1.5;
 	margin-bottom: 1em;
 }
 
-.sidebar-section a {
-	color: #8B0000;
-	font-weight: 500;
+.right-column a {
+	color: #0000EE;
+	text-decoration: underline;
+	font-weight: normal;
 }
 
-.sidebar-section a:hover {
-	color: #660000;
-	text-decoration: none;
+.right-column a:hover {
+	color: #33CC33;
 }
 
-.sidebar-section img {
+.right-column img {
 	max-width: 100%;
 	height: auto;
 	margin: 10px 0;
-	border-radius: 4px;
 }
 
-/* Footer Info Section */
-.footer-info h3,
-.footer-info h4 {
-	color: #fff;
-	margin-bottom: 15px;
+.right-column ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 1em 0;
 }
 
-.footer-info p {
-	font-size: 15px;
-	line-height: 1.6;
-}
-
-.footer-info a {
-	color: #fff;
-	text-decoration: underline;
-}
-
-.footer-info a:hover {
-	color: #f0f0f0;
+.right-column ul li {
+	margin-bottom: 0.5em;
 }
 
 /* Footer */
 .site-footer {
-	background: #e8e8e8;
+	background: #C0C0C0;
+	border-top: 1px solid #999;
 	bottom: 0;
 	width: 100%;
-	font-size: 13px;
 	position: absolute;
-	border-top: 3px solid #006633;
-	padding: 20px 0;
+	height: 140px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.footer-content {
+.footer-container {
+	width: 940px;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0 10px;
 	text-align: center;
-	color: #666;
 }
 
-.footer-content a {
-	color: #006633;
-	text-decoration: none;
+.footer-nav {
+	list-style: none;
+	margin: 0 0 15px 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 15px;
 }
 
-.footer-content a:hover {
-	color: #004d26;
+.footer-nav li {
+	margin: 0;
+}
+
+.footer-nav li a {
+	color: #0000EE;
 	text-decoration: underline;
+	font-size: 13px;
 }
 
-/* Settings Margin for Admin Panel */
-.settings-margin {
-	margin-top: 50px; /* 50px = nav size */
+.footer-nav li a:hover {
+	color: #33CC33;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-	.band-header {
-		padding: 25px 0;
-		margin-top: 50px;
+.footer-text {
+	font-size: 12px;
+	color: #000;
+	margin: 10px 0 0 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 960px) {
+	.banner-container,
+	.nav-container,
+	.content-container,
+	.footer-container {
+		width: 100%;
+		padding: 0 15px;
 	}
 	
-	.page-title {
-		font-size: 28px;
+	.banner-section {
+		min-height: auto;
 	}
 	
-	.content-card {
-		padding: 20px;
+	.banner-container {
+		height: auto;
 	}
 	
-	.sidebar-section {
-		margin-top: 20px;
+	.content-container {
+		flex-direction: column;
 	}
 	
-	.main-content {
-		padding: 20px 15px;
+	.left-column,
+	.right-column {
+		flex: 1 1 100%;
+		min-width: 100%;
+	}
+	
+	.nav-menu {
+		flex-direction: column;
+	}
+	
+	.nav-menu li {
+		width: 100%;
+	}
+	
+	.nav-menu li a {
+		padding: 10px 15px;
+		border-bottom: 1px solid #333;
+	}
+}
+
+@media (max-width: 640px) {
+	.top-bar {
+		height: 20px;
 	}
 	
 	body {
-		margin-bottom: 150px; /* More space for taller footer on mobile */
-	}
-}
-
-@media (max-width: 480px) {
-	.page-title {
-		font-size: 22px;
+		font-size: 13px;
+		padding-bottom: 180px; /* More space for taller mobile footer */
 	}
 	
-	.content-card h1 { font-size: 26px; }
-	.content-card h2 { font-size: 22px; }
-	.content-card h3 { font-size: 20px; }
-	.content-card h4 { font-size: 18px; }
+	.site-footer {
+		height: auto;
+		min-height: 140px;
+		padding: 20px 0;
+	}
+	
+	.left-column h1 { font-size: 20px; }
+	.left-column h2 { font-size: 18px; }
+	.left-column h3 { font-size: 16px; }
+	.left-column h4 { font-size: 15px; }
+	
+	.footer-nav {
+		flex-direction: column;
+		gap: 5px;
+	}
 }
 
 /* Print Styles */
 @media print {
-	.navbar,
-	.settings-margin,
+	.top-bar,
+	.main-nav,
 	.site-footer {
 		display: none;
 	}
 	
-	.band-header {
-		margin-top: 0;
-		background: #006633;
+	.banner-section {
+		background: #33CC33;
 		-webkit-print-color-adjust: exact;
 		print-color-adjust: exact;
 	}
 	
-	.content-card,
-	.sidebar-section {
-		box-shadow: none;
-		border: 1px solid #ddd;
+	body {
+		padding-bottom: 0;
 	}
+	
+	.content-container {
+		width: 100%;
+	}
+	
+	a {
+		color: #000;
+		text-decoration: underline;
+	}
+}
+
+/* WonderCMS Admin Styles */
+.settings-margin {
+	/* No top margin needed with new layout */
+}
+
+/* Editable content styling when logged in */
+.editText {
+	outline: 2px dashed #33CC33;
+	min-height: 20px;
+}
+
+.editText:hover {
+	background-color: rgba(51, 204, 51, 0.1);
 }
