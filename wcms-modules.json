@@ -3,7 +3,7 @@
 	"themes": {
 		"wrentham-band": {
 			"name": "Wrentham Band Theme",
-			"repo": "https://github.com/SimonCliffordNightscout/wrentham-theme/tree/master",
+			"repo": "https://github.com/SimonCliffordNightscout/wrentham-theme/tree/main",
 			"zip": "https://github.com/SimonCliffordNightscout/wrentham-theme/archive/master.zip",
 			"summary": "A clean, traditional theme for Wrentham Band with original colours",
 			"version": "1.0.2",
