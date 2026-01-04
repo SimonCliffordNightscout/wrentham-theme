@@ -1,0 +1,325 @@
+/* ===================================
+   Wrentham Band Theme Styles
+   Based on traditional brass band aesthetic
+   =================================== */
+
+/* Base Styles */
+html {
+	min-height: 100%;
+	position: relative;
+}
+
+body {
+	color: #333;
+	background: #f8f8f8;
+	margin-bottom: 120px; /* Space for footer */
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+/* Utility Classes */
+.whiteFont { color: #fff; }
+.lightFont { color: #666; }
+.greenFont { color: #006633; }
+
+.padding20 { padding: 20px; }
+.padding40 { padding: 40px; }
+
+/* Brand Colors - Wrentham Green & Red */
+.band-header {
+	background: linear-gradient(135deg, #006633 0%, #004d26 100%);
+	color: #fff;
+	padding: 40px 0;
+	margin-top: 50px; /* Account for fixed navbar */
+	box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.footer-info {
+	background: linear-gradient(135deg, #8B0000 0%, #660000 100%);
+	color: #fff;
+	padding: 30px 0;
+}
+
+/* Navigation */
+nav.navbar {
+	background: #fff;
+	border-bottom: 3px solid #006633;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+	margin: 0;
+}
+
+.navbar-default {
+	border: 0;
+	border-radius: 0;
+}
+
+.navbar-brand {
+	font-size: 20px;
+	font-weight: 700;
+	color: #006633 !important;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.navbar-brand:hover {
+	color: #004d26 !important;
+}
+
+.navbar li {
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: 0.3px;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #333;
+	transition: all 0.3s ease;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li.active > a {
+	color: #fff !important;
+	background: #006633 !important;
+}
+
+.navbar-default .navbar-toggle {
+	border-color: #006633;
+}
+
+.navbar-default .navbar-toggle:hover {
+	background: rgba(0, 102, 51, 0.1);
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #006633;
+}
+
+/* Header & Page Title */
+.page-title {
+	text-transform: uppercase;
+	font-size: 36px;
+	font-weight: 700;
+	margin: 0;
+	text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+	letter-spacing: 1px;
+}
+
+/* Main Content Area */
+.main-content {
+	padding: 40px 15px;
+}
+
+.content-card {
+	background: white;
+	border-radius: 6px;
+	padding: 30px;
+	margin-bottom: 20px;
+	box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+	border-top: 4px solid #006633;
+}
+
+.content-card h1,
+.content-card h2,
+.content-card h3,
+.content-card h4 {
+	color: #006633;
+	margin-top: 1.5em;
+	margin-bottom: 0.75em;
+	font-weight: 600;
+}
+
+.content-card h1 { font-size: 32px; }
+.content-card h2 { font-size: 28px; }
+.content-card h3 { font-size: 24px; }
+.content-card h4 { font-size: 20px; }
+
+.content-card p {
+	margin-bottom: 1.2em;
+}
+
+.content-card a {
+	color: #006633;
+	text-decoration: none;
+	border-bottom: 1px solid transparent;
+	transition: all 0.3s ease;
+}
+
+.content-card a:hover {
+	color: #004d26;
+	border-bottom-color: #006633;
+	text-decoration: none;
+}
+
+.content-card img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 4px;
+	margin: 20px 0;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Sidebar */
+.sidebar-section {
+	background: white;
+	border-radius: 6px;
+	padding: 25px;
+	margin-bottom: 20px;
+	box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+	border-left: 4px solid #8B0000;
+}
+
+.sidebar-section h3,
+.sidebar-section h4 {
+	color: #8B0000;
+	margin-top: 1.2em;
+	margin-bottom: 0.6em;
+	font-weight: 600;
+	font-size: 18px;
+}
+
+.sidebar-section h3:first-child,
+.sidebar-section h4:first-child {
+	margin-top: 0;
+}
+
+.sidebar-section p {
+	font-size: 14px;
+	line-height: 1.5;
+	margin-bottom: 1em;
+}
+
+.sidebar-section a {
+	color: #8B0000;
+	font-weight: 500;
+}
+
+.sidebar-section a:hover {
+	color: #660000;
+	text-decoration: none;
+}
+
+.sidebar-section img {
+	max-width: 100%;
+	height: auto;
+	margin: 10px 0;
+	border-radius: 4px;
+}
+
+/* Footer Info Section */
+.footer-info h3,
+.footer-info h4 {
+	color: #fff;
+	margin-bottom: 15px;
+}
+
+.footer-info p {
+	font-size: 15px;
+	line-height: 1.6;
+}
+
+.footer-info a {
+	color: #fff;
+	text-decoration: underline;
+}
+
+.footer-info a:hover {
+	color: #f0f0f0;
+}
+
+/* Footer */
+.site-footer {
+	background: #e8e8e8;
+	bottom: 0;
+	width: 100%;
+	font-size: 13px;
+	position: absolute;
+	border-top: 3px solid #006633;
+	padding: 20px 0;
+}
+
+.footer-content {
+	text-align: center;
+	color: #666;
+}
+
+.footer-content a {
+	color: #006633;
+	text-decoration: none;
+}
+
+.footer-content a:hover {
+	color: #004d26;
+	text-decoration: underline;
+}
+
+/* Settings Margin for Admin Panel */
+.settings-margin {
+	margin-top: 50px; /* 50px = nav size */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+	.band-header {
+		padding: 25px 0;
+		margin-top: 50px;
+	}
+	
+	.page-title {
+		font-size: 28px;
+	}
+	
+	.content-card {
+		padding: 20px;
+	}
+	
+	.sidebar-section {
+		margin-top: 20px;
+	}
+	
+	.main-content {
+		padding: 20px 15px;
+	}
+	
+	body {
+		margin-bottom: 150px; /* More space for taller footer on mobile */
+	}
+}
+
+@media (max-width: 480px) {
+	.page-title {
+		font-size: 22px;
+	}
+	
+	.content-card h1 { font-size: 26px; }
+	.content-card h2 { font-size: 22px; }
+	.content-card h3 { font-size: 20px; }
+	.content-card h4 { font-size: 18px; }
+}
+
+/* Print Styles */
+@media print {
+	.navbar,
+	.settings-margin,
+	.site-footer {
+		display: none;
+	}
+	
+	.band-header {
+		margin-top: 0;
+		background: #006633;
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+	}
+	
+	.content-card,
+	.sidebar-section {
+		box-shadow: none;
+		border: 1px solid #ddd;
+	}
+}
